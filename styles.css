@@ -1,0 +1,1269 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    /* Ensure body and html take up the full height */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Make the body a flex container */
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 120px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #18BC9C;
+}
+
+.auth-buttons button {
+    background-color: #18BC9C;
+    /* The correct background color */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    /* Ensure text is white */
+    font-weight: bold;
+    /* Make the text bold */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    /* Remove any default underline */
+}
+
+.auth-buttons button:hover {
+    background-color: #149174;
+    /* Hover effect for the button */
+}
+
+.auth-buttons a {
+    color: white;
+    /* Ensure the link text is white */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.auth-buttons a:hover {
+    text-decoration: underline;
+    /* Optional hover underline effect */
+}
+
+
+/* Responsive Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #149174;
+}
+
+/* Featured Resources Section */
+.featured-resources {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.featured-resources h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.featured-resources p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Sign-In and Sign-Up Sections */
+.signin-section,
+.signup-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.signin-section h1,
+.signup-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.signin-section p,
+.signup-section p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.signin-form,
+.signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #18BC9C;
+    outline: none;
+    box-shadow: 0 0 8px rgba(24, 188, 156, 0.2);
+}
+
+.form-help {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #149174;
+}
+
+.signin-section p,
+.signup-section p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.signin-section a,
+.signup-section a {
+    color: #18BC9C;
+    text-decoration: none;
+}
+
+.signin-section a:hover,
+.signup-section a:hover {
+    text-decoration: underline;
+}
+
+/* OR Divider */
+.or-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #777;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.or-divider span {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.or-divider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.google-btn {
+    background-color: white;
+}
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+}
+
+.facebook-btn:hover {
+    background-color: #2d4373;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-login {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .social-btn {
+        max-width: 100%;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .signin-section h1,
+    .signup-section h1 {
+        font-size: 2rem;
+    }
+
+    .signin-form,
+    .signup-form {
+        padding: 20px;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+}
+
+
+/* Grid for Explore Our Resources (3 items in 1 row) */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.resource-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.resource-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.resource-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.resource-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #18BC9C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resource-item a:hover {
+    background-color: #149174;
+}
+
+/* Filters Section */
+.filters {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.filters h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Aligning Filter Buttons Horizontally */
+.filter-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #18BC9C;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #149174;
+}
+
+/* Hover Effects for Resource Items */
+.resource-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Join the Community Section */
+.community {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.community h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.community p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.community-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.community-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.community-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.community-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.community-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.community-item button {
+    padding: 10px 20px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.community-item button:hover {
+    background-color: #149174;
+}
+
+/* Hover Effects for Community Items */
+.community-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Store Section */
+.store {
+    flex-grow: 1;
+    /* Ensures the main content takes up available space */
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Store Hero Section */
+.store-hero {
+    position: relative;
+    height: 80vh;
+    /* Takes up 80% of the viewport height */
+    background: linear-gradient(to right, rgba(33, 147, 176, 0.7), rgba(109, 213, 237, 0.7)),
+        url('images/store_hero_bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+    /* Ensures the content is above any background or overlay */
+}
+
+.store-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: fadeInUp 1s ease-out;
+}
+
+.store-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 2s ease-out;
+}
+
+.cta-btn:hover {
+    background-color: #149174;
+}
+
+/* Cart Section */
+.cart-section {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+.cart-section h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.cart-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.cart-item .price {
+    font-size: 1.2rem;
+    color: #18BC9C;
+}
+
+.cart-summary {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.cart-summary h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cart-total h3 {
+    font-size: 1.8rem;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+/* Cart Icon in Navbar */
+.cart-icon {
+    margin-right: 145px;
+    display: inline-block;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Adjust auth-buttons to align with cart icon */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    background-color: #18BC9C;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #149174;
+}
+
+
+/* Checkout Buttons */
+.checkout-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Add space between the buttons */
+}
+
+.checkout-btn,
+.cancel-btn {
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn {
+    background-color: #e74c3c;
+}
+
+.checkout-btn:hover {
+    background-color: #149174;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-content {
+        flex-direction: column;
+    }
+
+    .cart-items {
+        margin-right: 0;
+    }
+}
+
+
+/* Cart Popup Message */
+.cart-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #18BC9C;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.cart-popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.cart-popup.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .store-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .store-hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
+
+/* Grid for Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #18BC9C;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #149174;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Button */
+.checkout {
+    margin-top: 40px;
+}
+
+.checkout-btn {
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #149174;
+}
+
+/* Form Section */
+.form-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.form-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.form-section p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #18BC9C;
+    outline: none;
+    box-shadow: 0 0 8px rgba(24, 188, 156, 0.2);
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #149174;
+}
+
+/* Support Page Header */
+.support-header {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.support-header h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.support-header p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Support Options Section */
+.support-options {
+    padding: 50px 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+}
+
+/* Each Support Section */
+.support-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+    /* Center the text */
+}
+
+.support-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.support-image {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* Center the image */
+}
+
+.support-image img {
+    width: 80%;
+    /* Adjust image width for centering */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.support-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content vertically */
+}
+
+.support-content h3 {
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.support-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 80%;
+    /* Center content with a narrower width */
+}
+
+.support-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #18BC9C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.support-link:hover {
+    background-color: #149174;
+}
+
+/* Hover Effects for Support Items */
+.support-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .support-section {
+        flex-direction: column;
+        text-align: center;
+        /* Center text for smaller screens */
+    }
+
+    .support-section.reverse {
+        flex-direction: column;
+    }
+
+    .support-image,
+    .support-content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .support-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ECF0F1;
+}
+
+.footer-about p {
+    font-size: 1rem;
+    color: #BDC3C7;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ECF0F1;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    color: #18BC9C;
+    text-decoration: underline;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icons a {
+    display: inline-block;
+}
+
+.footer-social .social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #BDC3C7;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    color: #BDC3C7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-social {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+
+    .resource-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .resource-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

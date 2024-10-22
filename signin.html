@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Heal - Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Include Navbar -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="Image\Logo\logo.png" alt="Mindful Heal Logo" /></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button><a href="signup.html">Sign UP</a></button>
+            </div>
+            <div class="hamburger-menu" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sign-In Section -->
+    <section class="signin-section">
+        <h1>Welcome Back!</h1>
+        <p>Sign in to access your account</p>
+
+        <form id="signinForm" class="signin-form">
+            <div class="form-group">
+                <label for="signin-email">Email Address</label>
+                <input type="email" id="signin-email" name="email" placeholder="Enter your email" required>
+                <small id="signinEmailHelp" class="form-help"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" name="password" placeholder="Enter your password" required>
+                <small id="signinPasswordHelp" class="form-help"></small>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign In</button>
+
+            <!-- OR Divider -->
+            <div class="or-divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Continue with Google and Facebook -->
+            <div class="social-login">
+                <button type="button" class="social-btn google-btn">
+                    <img src="Image\Icons\google.png" alt="Google Logo">
+                    Continue with Google
+                </button>
+                <button type="button" class="social-btn facebook-btn">
+                    <img src="Image\Icons\fb2.png" alt="Facebook Logo">
+                    Continue with Facebook
+                </button>
+            </div>
+
+            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

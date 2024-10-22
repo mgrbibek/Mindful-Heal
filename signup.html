@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Heal - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Include Navbar -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="Image\Logo\logo.png" alt="Mindful Heal Logo" /></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button><a href="signin.html">Sign In</a></button>
+            </div>
+            <div class="hamburger-menu" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sign-Up Section -->
+    <section class="signup-section">
+        <h1>Let's Create Your Account</h1>
+        <p>Sign up to join the community</p>
+
+        <form id="signupForm" class="signup-form">
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                <small id="signupEmailHelp" class="form-help"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="Create a strong password"
+                    required>
+                <small id="signupPasswordHelp" class="form-help"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-confirm-password">Confirm Password</label>
+                <input type="password" id="signup-confirm-password" name="confirmPassword"
+                    placeholder="Confirm your password" required>
+                <small id="signupConfirmPasswordHelp" class="form-help"></small>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+
+            <!-- OR Divider -->
+            <div class="or-divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Continue with Google and Facebook -->
+            <div class="social-login">
+                <button type="button" class="social-btn google-btn">
+                    <img src="Image\Icons\google.png" alt="Google Logo">
+                    Continue with Google
+                </button>
+                <button type="button" class="social-btn facebook-btn">
+                    <img src="Image\Icons\fb2.png" alt="Facebook Logo">
+                    Continue with Facebook
+                </button>
+            </div>
+
+            <p>Already have an account? <a href="signin.html">Sign in here</a></p>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

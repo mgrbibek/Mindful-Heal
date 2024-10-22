@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Heal - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Include Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="Image\Logo\logo.png" alt="Mindful Heal Logo" /></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h1>Your Cart</h1>
+
+        <div class="cart-content">
+            <div class="cart-items">
+                <!-- Cart items will be populated here -->
+            </div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="cart-total">
+                    <h3>Total: $0.00</h3>
+                </div>
+
+                <div class="checkout-buttons">
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup for Cancel Action -->
+    <div id="cancel-popup" class="cart-popup">
+        <p>All items removed from cart...</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
